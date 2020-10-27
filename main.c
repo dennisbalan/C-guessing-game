@@ -30,9 +30,20 @@ int main(int argc, char ** argv){
 	d = c-1;
 	e = firstGuess(a,b);
 	char f;
-	f = getAnswer();	
-	
-	
+	f = getAnswer();
+	int j;
+	char o;	
+ 	while (d <= f){
+		j = guessNum(e,f);
+		o = getAnswer();
+		f = o;
+		e = j;	
+		if(f == 'c'){
+			printf("Thanks for playing.\n");
+			break;
+                }
+		i++;
+	}
 	
 
 

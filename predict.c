@@ -1,3 +1,4 @@
+#include <math.h>
 int predict(int low, int high){
 	double a,b;
 	int c;

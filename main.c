@@ -79,6 +79,7 @@ int main(int argc, char ** argv){
 		}
 		if(a > b){
 			printf("You did something weird with your number. Disqualified\n");
+			return 0;
 		}
 	}
 }

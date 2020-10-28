@@ -25,6 +25,10 @@ int main(int argc, char ** argv){
 		printf("too many arguements\n");
 		return 0;
 	}
+	if(a == b){
+		printf("you can not have the same numbers\n");
+		return 0;
+	}
 	int c;
 	c = predict(a,b);
 	printf("I will try to guess you number in %d guesses.\n",c);
@@ -48,6 +52,9 @@ int main(int argc, char ** argv){
 		else if(f == 'h'){
 			b=guessNum(e,f);
 			
+		}
+		if(a > b){
+			printf("You did something weird with your number. Disqualified\n");
 		}
 	}
 }

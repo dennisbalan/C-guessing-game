@@ -28,28 +28,28 @@ int main(int argc, char ** argv){
 	int c;
 	c = predict(a,b);
 	printf("I will try to guess you number in %d guesses.\n",c);
-	int d,e;
-	d = c-1;
-	e = firstGuess(a,b);
-	printf("Is the number %d?\n",e);
-	char f;
-	f = getAnswer();
-	int j;
-	char o;
-	int i = 0;
- 	while (i <= d){
-		j = guessNum(e,f);
-		printf("Is the number %d?\n",j);
-		o = getAnswer();
-		f = o;
-		e = j;	
+	char enter_u[4];
+	fgets(enter_u,4,stdin);
+	int i,e,j;
+	for(i= 0;i < c;i++){
+		j = i+1;
+ 		e = firstGuess(a,b);
+		printf("Guess %d = %d is my guess correct?",j,e);
+		char f;
+		f = getAnswer();
 		if(f == 'c'){
-			printf("Thanks for playing.\n");
+			printf("That was easy.\n");
 			break;
-                }
-		i++;
+		}
+		else if(f == 'l'){
+			a=guessNum(e,f);
+			
+		}
+		else if(f == 'h'){
+			b=guessNum(e,f);
+			
+		}
 	}
-	
-
-
 }
+
+    
